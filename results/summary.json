@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "system": "Linux",
+    "release": "6.18.57",
+    "architecture": "x86_64",
+    "processor": "",
+    "python": "3.13.5"
+  },
+  "configuration": {
+    "seed": 302,
+    "records": 600,
+    "measured_runs": 5,
+    "cache_pages": 8,
+    "policy_test_pages": 50,
+    "policy_cache_pages": 5,
+    "policy_reference_count": 500,
+    "concurrency": 1,
+    "workload": "deterministic synthetic media metadata"
+  },
+  "results": {
+    "cache_FIFO": {
+      "runs": 5,
+      "mean_ms": 0.7806,
+      "median_ms": 0.6971,
+      "p95_ms": 1.1477,
+      "min_ms": 0.6705,
+      "max_ms": 1.1477,
+      "stdev_ms": 0.2056
+    },
+    "cache_LRU": {
+      "runs": 5,
+      "mean_ms": 0.663,
+      "median_ms": 0.661,
+      "p95_ms": 0.6796,
+      "min_ms": 0.647,
+      "max_ms": 0.6796,
+      "stdev_ms": 0.0144
+    },
+    "index_bplus_build": {
+      "runs": 5,
+      "mean_ms": 0.6165,
+      "median_ms": 0.6318,
+      "p95_ms": 0.7079,
+      "min_ms": 0.5027,
+      "max_ms": 0.7079,
+      "stdev_ms": 0.0749
+    },
+    "index_bplus_read_heavy": {
+      "runs": 5,
+      "mean_ms": 0.0577,
+      "median_ms": 0.0436,
+      "p95_ms": 0.115,
+      "min_ms": 0.0429,
+      "max_ms": 0.115,
+      "stdev_ms": 0.032
+    },
+    "index_equality": {
+      "runs": 5,
+      "mean_ms": 0.4385,
+      "median_ms": 0.4414,
+      "p95_ms": 0.4702,
+      "min_ms": 0.4033,
+      "max_ms": 0.4702,
+      "stdev_ms": 0.0261
+    },
+    "index_lsm_build": {
+      "runs": 5,
+      "mean_ms": 4.1902,
+      "median_ms": 4.2186,
+      "p95_ms": 4.9498,
+      "min_ms": 3.4722,
+      "max_ms": 4.9498,
+      "stdev_ms": 0.5468
+    },
+    "index_lsm_read_heavy": {
+      "runs": 5,
+      "mean_ms": 62.3196,
+      "median_ms": 49.1823,
+      "p95_ms": 87.2941,
+      "min_ms": 44.0142,
+      "max_ms": 87.2941,
+      "stdev_ms": 22.574
+    },
+    "scan_equality": {
+      "runs": 5,
+      "mean_ms": 75.742,
+      "median_ms": 75.4675,
+      "p95_ms": 76.8101,
+      "min_ms": 74.9472,
+      "max_ms": 76.8101,
+      "stdev_ms": 0.8056
+    },
+    "storage_column_scan_media_type": {
+      "runs": 5,
+      "mean_ms": 1.3383,
+      "median_ms": 1.3348,
+      "p95_ms": 1.36,
+      "min_ms": 1.32,
+      "max_ms": 1.36,
+      "stdev_ms": 0.0148
+    },
+    "storage_row_scan_media_type": {
+      "runs": 5,
+      "mean_ms": 1.7655,
+      "median_ms": 1.7463,
+      "p95_ms": 1.862,
+      "min_ms": 1.7269,
+      "max_ms": 1.862,
+      "stdev_ms": 0.0548
+    }
+  }
+}

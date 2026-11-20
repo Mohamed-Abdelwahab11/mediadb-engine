@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediadb-engine"
+version = "0.2.0"
+description = "Experimental media metadata engine with custom pages, buffering, B+ tree and LSM indexing"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["mediadb*"]
